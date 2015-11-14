@@ -23,6 +23,7 @@ gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "title"
 gem 'twitter-bootswatch-rails', '~> 3.3.4'
+gem 'therubyracer'
 gem "uglifier"
 
 group :development do

@@ -17,3 +17,8 @@ en:
 
   titles:
     application: Whats-cooking
+  helpers:
+    actions: "Actions"
+    links:
+      new: "New"
+      cancel: "Cancel"
