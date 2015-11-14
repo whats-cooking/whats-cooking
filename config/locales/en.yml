@@ -22,3 +22,6 @@ en:
     links:
       new: "New"
       cancel: "Cancel"
+      back: "Back"
+      edit: "Edit"
+      destroy: "Delete"

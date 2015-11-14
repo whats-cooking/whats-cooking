@@ -4,6 +4,7 @@ ruby "2.2.3"
 
 gem "airbrake"
 gem "autoprefixer-rails"
+gem 'aws-sdk', '< 2.0'
 gem "bourbon", "~> 4.2.0"
 gem "coffee-rails", "~> 4.1.0"
 gem "delayed_job_active_record"
@@ -17,6 +18,7 @@ gem "newrelic_rpm", ">= 3.9.8"
 gem "normalize-rails", "~> 3.0.0"
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'paperclip'
 gem "pg"
 gem "puma"
 gem "rack-canonical-host"

@@ -5,10 +5,9 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th>&nbsp;</th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:picture_url) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -16,11 +15,10 @@
   <tbody>
     <% @meals.each do |meal| %>
       <tr>
-        <td><%= link_to meal.id, meal_path(meal) %></td>
-        <td><%= meal.title %></td>
+        <td><%= image_tag(meal.image.url(:thumb)) %></td>
+        <td><%= link_to meal.title, meal_path(meal) %></td>
         <td><%= meal.description %></td>
-        <td><%= meal.picture_url %></td>
-        <td><%=l meal.created_at %></td>
+        <td><%= meal.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_meal_path(meal), :class => 'btn btn-primary btn-xs' %>

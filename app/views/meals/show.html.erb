@@ -9,7 +9,7 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @meal.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:picture_url) %>:</strong></dt>
-  <dd><%= @meal.picture_url %></dd>
+  <dd><%= image_tag @meal.image.url(:square) %></dd>
 </dl>
 
 <div class="form-actions">
