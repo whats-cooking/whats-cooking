@@ -22,6 +22,7 @@ class MealsController < ApplicationController
   # POST /meals
   def create
     @meal = Meal.new(meal_params)
+    @meal.user = current_user
 
     if @meal.save
       redirect_to @meal, notice: 'Meal was successfully created.'
@@ -53,6 +54,6 @@ class MealsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def meal_params
-      params.require(:meal).permit(:title, :description, :image)
+      params.require(:meal).permit(:title, :description, :image, :time)
     end
 end

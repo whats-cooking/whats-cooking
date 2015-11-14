@@ -2,6 +2,7 @@
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.file_field :image %>
+  <%= f.datetime_local_field :time %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

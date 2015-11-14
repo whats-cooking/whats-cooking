@@ -1,9 +1,8 @@
 class User < ActiveRecord::Base
+
+  has_many :meals
+
   def self.from_omniauth(auth)
-
-    puts "HORSE"
-    puts auth
-
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid      = auth.uid
