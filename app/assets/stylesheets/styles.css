@@ -1,0 +1,8 @@
+.personal-links {
+  list-style-type: none;
+  float: right;
+}
+
+.personal-links li a {
+    color: white;
+}

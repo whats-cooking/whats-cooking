@@ -3,4 +3,5 @@
  *= require_self
  *= require sandstone/loader
  *= require sandstone/bootswatch
+ *= require styles
 */
