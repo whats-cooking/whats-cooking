@@ -1,14 +1,10 @@
-<%- model_class = Meal -%>
 <div class="page-header">
   <h1>Pick a meal!</h1>
 </div>
-<table class="table table-striped">
-  <tbody>
     <% @meals.each do |meal| %>
-      <tr>
-        <td><%= image_tag(meal.image.url(:thumb)) %></td>
-        <td><%= link_to meal.title, meal_path(meal) %> by <%= link_to meal.user.name %></td>
-      </tr>
+      <div class="col-lg-3   col-md-4 col-sm-12" style="padding: 5px">
+        <%= link_to image_tag(meal.image.url(:square), class: "img-circle"), meal_path(meal) %><br>
+        <%= link_to meal.title, meal_path(meal) %> at <%=  meal.user.name %>'s place<br>
+        <%= HumanDate.from_today(meal.time) %> at <%= meal.time.strftime("%H:%M")  %>
+      </div>
     <% end %>
-  </tbody>
-</table>
