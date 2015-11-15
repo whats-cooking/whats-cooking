@@ -3,7 +3,7 @@ class MealsController < ApplicationController
 
   # GET /meals
   def index
-    @meals = Meal.all
+    @meals = Meal.where("time > ?", DateTime.now).order("time")
   end
 
   # GET /meals/1
