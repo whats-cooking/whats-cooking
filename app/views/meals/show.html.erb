@@ -10,9 +10,14 @@
     <li><%= HumanDate.from_today(@meal.time) %> at <%= @meal.time.strftime("%H:%M") %></li>
     <li>Price: <%= @meal.price %> NOK</li>
     <li>
-      <button class="btn-lg btn-primary">Book this meal now!</button>
+      <% if current_user %>
+          <button class="btn-lg btn-primary">Book this meal now!</button>
+      <% else %>
+          <button class="btn-lg btn-primary">Log in to book this meal</button>
+      <% end %>
     </li>
   </ul>
 </div>
 
 <p><%= simple_format(@meal.description) %></p>
+
