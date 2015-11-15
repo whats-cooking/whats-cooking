@@ -6,7 +6,7 @@
 <div class="form-actions pull-right">
   <ul style="list-style-type: none">
     <li><%= image_tag(@meal.user.image_url) %></li>
-    <li>At  <%= @meal.user.name %>'s place</li>
+    <li>At  <%= @meal.user.name %>'s place <%= image_tag('four_star_rating.gif') %></li>
     <li><%= HumanDate.from_today(@meal.time) %> at <%= @meal.time.strftime("%H:%M") %></li>
     <li>Price: <%= @meal.price %> NOK</li>
     <li>
