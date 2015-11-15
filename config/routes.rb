@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  resources :meals
+  resources :meals do
+    resources :bookings do
+    end
+  end
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
-  root to: 'info#index'
+  root to: 'meals#index'
 end

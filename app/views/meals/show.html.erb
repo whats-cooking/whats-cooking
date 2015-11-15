@@ -11,7 +11,7 @@
     <li>Price: <%= @meal.price %> NOK</li>
     <li>
       <% if current_user %>
-          <button class="btn-lg btn-primary">Book this meal now!</button>
+          <button id="book" class="btn-lg btn-primary">Book this meal now!</button>
       <% else %>
           <button class="btn-lg btn-primary">Log in to book this meal</button>
       <% end %>
@@ -21,3 +21,10 @@
 
 <p><%= simple_format(@meal.description) %></p>
 
+<% content_for :page_javascript do %>
+    <script type='text/javascript'>
+        $('#book').click(function(){
+            window.location.href = '<%= meal_bookings_path(@meal.id) %>';
+        });
+   </script>
+<% end %>
