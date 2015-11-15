@@ -1,1 +1,28 @@
-EDIT HERE!
+<div id="homepage-background">
+  <div class="jumbotron">
+    <h2>Home cooked meals are now just a single click away!</h2>
+
+    <p>Hungry and no time to cook?<br>
+      Hobby chef eager to share your food and skills?
+    </p>
+
+    <p>
+      Chef: describe your meal, set the time and desirable price for the order<br>
+      Busy person: find your favourite meal, agree on delivery, pay and get the food
+    </p>
+
+    <p>
+      Get connected through our platform and enjoy the experience!
+    </p>
+
+    <p><a id="goto-meals" class="btn btn-primary btn-lg">Pick your next meal!</a></p>
+  </div>
+</div>
+
+<% content_for :page_javascript do %>
+    <script type='text/javascript'>
+        $('#goto-meals').click(function(){
+            window.location.href = '<%= meals_path %>';
+        });
+    </script>
+<% end %>

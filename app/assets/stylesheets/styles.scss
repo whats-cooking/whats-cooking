@@ -1,0 +1,27 @@
+.personal-links {
+  list-style-type: none;
+  float: right;
+}
+
+.personal-links li a {
+  color: white;
+}
+
+.jumbotron {
+  background-color: transparent;
+  position: relative;
+}
+
+.jumbotron:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: image-url("bigfood3.jpg");
+  width: 100%;
+  height: 100%;
+  opacity : 0.25;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
